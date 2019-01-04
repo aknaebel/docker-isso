@@ -4,7 +4,7 @@ MAINTAINER Alain Knaebel, <alain.knaebel@aknaebel.fr>
 ENV ISSO_SETTINGS /opt/isso/isso.conf
 
 RUN apk upgrade --update \
- && apk add python3 python3-dev sqlite gcc musl-dev ca-certificates openssl \
+ && apk add python3 python3-dev sqlite gcc musl-dev ca-certificates openssl libffi-dev \
  && update-ca-certificates \
  && pip3 install isso gunicorn gevent \
  && mkdir -p /opt/isso \
